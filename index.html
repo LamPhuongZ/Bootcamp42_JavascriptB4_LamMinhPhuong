@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài tập If - else</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Bài tập If - else</h1>
+
+
+    <div class="container text-center py-5">
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item mx-1" role="presentation">
+                <button class="nav-link active" id="pills-lesson1-tab" data-toggle="pill" data-target="#lesson1"
+                    type="button" role="tab" aria-controls="lesson1" aria-selected="true">Bài 1</button>
+            </li>
+
+            <li class="nav-item mx-1" role="presentation">
+                <button class="nav-link" id="pills-lesson2-tab" data-toggle="pill" data-target="#lesson2" type="button"
+                    role="tab" aria-controls="lesson2" aria-selected="false">Bài 2</button>
+            </li>
+
+            <li class="nav-item mx-1" role="presentation">
+                <button class="nav-link" id="pills-lesson3-tab" data-toggle="pill" data-target="#lesson3" type="button"
+                    role="tab" aria-controls="lesson3" aria-selected="false">Bài 3</button>
+            </li>
+
+            <li class="nav-item mx-1" role="presentation">
+                <button class="nav-link" id="pills-lesson4-tab" data-toggle="pill" data-target="#lesson4" type="button"
+                    role="tab" aria-controls="lesson4" aria-selected="false">Bài 4</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            <!-- Bài tập 1: Cho người dùng nhập 3 số nguyên. Viết chương trình xuất 3 số theo thứ tự tăng dần -->
+            <div class="tab-pane fade show active" id="lesson1" role="tabpanel" aria-labelledby="pills-lesson1-tab">
+                <div class="row">
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white text-center">Bài tập 1: Xuất 3 số theo thứ tự
+                                tăng dần
+                            </div>
+
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <input type="text" id="txtnumber1" class="form-control"
+                                        placeholder="Nhập số thứ 1" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" id="txtnumber2" class="form-control"
+                                        placeholder="Nhập số thứ 2" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" id="txtnumber3" class="form-control"
+                                        placeholder="Nhập số thứ 3" />
+                                </div>
+
+                                <div class="text-center">
+                                    <button id="calculate" class="btn btn-danger">Sắp xếp</button>
+                                </div>
+
+                                <!-- Hiển thị kết quả -->
+                                <div style="display: none;" class="text-center" id="result-wrapper">
+                                    <p>Kết quả</p>
+                                    <!-- Hiển thị sắp xếp -->
+                                    <p id="result-b1"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc bài tập 1 -->
+
+            <!-- Bài tập 2: Câu xin chào -->
+            <div class="tab-pane fade" id="lesson2" role="tabpanel" aria-labelledby="pills-lesson2-tab">
+                <div class="row">
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white text-center">Bài tập 2: Chương trình "Chào hỏi"
+                            </div>
+
+                            <div class="card-body">
+                                <select class="form-control" id="choose">
+                                    <option value="X">Chọn thành viên</option>
+                                    <option value="B">Bố</option>
+                                    <option value="M">Mẹ</option>
+                                    <option value="A">Anh Trai</option>
+                                    <option value="E">Em Gái</option>
+                                </select>
+
+                                <div class="text-center mt-2">
+                                    <button id="btn__sent" class="btn btn-danger">Gửi lời chào</button>
+                                </div>
+
+                                <!-- Hiển thị kết quả -->
+                                <div style="display: none;" class="text-center" id="result-choose">
+                                    <p>Kết quả</p>
+                                    <!-- Hiển thị xin chào -->
+                                    <p id="result-b2"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc bài tập 2 -->
+
+            <!-- Bài tập 3: Câu xin chào -->
+            <div class="tab-pane fade" id="lesson3" role="tabpanel" aria-labelledby="pills-lesson3-tab">
+                <div class="row">
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white text-center">Bài tập 3: Đếm số chẵn lẻ
+                            </div>
+
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <input type="text" id="txtnumber01" class="form-control"
+                                        placeholder="Nhập số thứ 1" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" id="txtnumber02" class="form-control"
+                                        placeholder="Nhập số thứ 2" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" id="txtnumber03" class="form-control"
+                                        placeholder="Nhập số thứ 3" />
+                                </div>
+
+                                <div class="text-center">
+                                    <button id="btn__count" class="btn btn-danger">Đếm</button>
+                                </div>
+
+                                <!-- Hiển thị kết quả -->
+                                <div style="display: none;" class="text-center" id="result-count">
+                                    <p>Kết quả</p>
+                                    <!-- Hiển thị sắp xếp -->
+                                    <p id="result-b3"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc bài tập 3 -->
+
+             <!-- Bài tập 4: Đoán hình tam giác -->
+             <div class="tab-pane fade" id="lesson4" role="tabpanel" aria-labelledby="pills-lesson4-tab">
+                <div class="row">
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white text-center">Bài tập 4: Đoán hình tam giác
+                            </div>
+
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <input type="text" id="txtnumberA" class="form-control"
+                                        placeholder="Nhập độ dài cạnh 1" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" id="txtnumberB" class="form-control"
+                                        placeholder="Nhập độ dài cạnh 2" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" id="txtnumberC" class="form-control"
+                                        placeholder="Nhập độ dài cạnh 3" />
+                                </div>
+
+                                <div class="text-center">
+                                    <button id="btn__guess" class="btn btn-danger">Dự đoán</button>
+                                </div>
+
+                                <!-- Hiển thị kết quả -->
+                                <div style="display: none;" class="text-center" id="result-guess">
+                                    <p>Kết quả</p>
+                                    <!-- Hiển thị sắp xếp -->
+                                    <p id="result-b4"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc bài tập 4 -->
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- MY JS -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
