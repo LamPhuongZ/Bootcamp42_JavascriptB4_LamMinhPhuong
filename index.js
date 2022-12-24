@@ -5,6 +5,7 @@ document.getElementById("calculate").onclick = function () {
     let number02 = +document.getElementById("txtnumber2").value;
     let number03 = +document.getElementById("txtnumber3").value;
 
+    // output
     let result = '';
 
     // xét điều kiện
@@ -34,6 +35,7 @@ document.getElementById("calculate").onclick = function () {
         }
     }
 
+    // Hiển thị kết quả
     document.getElementById("result-wrapper").style.display = "block";
     document.getElementById("result-b1").innerHTML = result;
 }
@@ -81,6 +83,7 @@ document.getElementById("btn__count").onclick = function () {
     let number02 = +document.getElementById("txtnumber02").value;
     let number03 = +document.getElementById("txtnumber03").value;
 
+    // output
     let count = 0;
     let result = 0;
 
@@ -101,6 +104,7 @@ document.getElementById("btn__count").onclick = function () {
 
         result = 3 - count;
 
+        // Hiển thị kết quả
         document.getElementById("result-count").style.display = "block";
         document.getElementById("result-b3").innerHTML = "Có " + count + " số chẵn, " + result + " số lẻ";
     }
@@ -117,6 +121,7 @@ document.getElementById("btn__guess").onclick = function () {
     let numberB = +document.getElementById("txtnumberB").value;
     let numberC = +document.getElementById("txtnumberC").value;
 
+    // output
     let sumAB = numberA + numberB;
     let sumAC = numberA + numberC;
     let sumBC = numberB + numberC;
@@ -143,6 +148,7 @@ document.getElementById("btn__guess").onclick = function () {
             }
         }
 
+        // Hiển thị kết quả
         document.getElementById("result-guess").style.display = "block";
         document.getElementById("result-b4").innerHTML = result;
     }
