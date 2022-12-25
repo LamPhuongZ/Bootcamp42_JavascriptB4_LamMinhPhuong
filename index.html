@@ -37,6 +37,26 @@
                 <button class="nav-link" id="pills-lesson4-tab" data-toggle="pill" data-target="#lesson4" type="button"
                     role="tab" aria-controls="lesson4" aria-selected="false">Bài 4</button>
             </li>
+
+            <li class="nav-item mx-1" role="presentation">
+                <button class="nav-link" id="pills-lesson5-tab" data-toggle="pill" data-target="#lesson5" type="button"
+                    role="tab" aria-controls="lesson5" aria-selected="false">Bài 5</button>
+            </li>
+
+            <li class="nav-item mx-1" role="presentation">
+                <button class="nav-link" id="pills-lesson6-tab" data-toggle="pill" data-target="#lesson6" type="button"
+                    role="tab" aria-controls="lesson5" aria-selected="false">Bài 6</button>
+            </li>
+
+            <li class="nav-item mx-1" role="presentation">
+                <button class="nav-link" id="pills-lesson7-tab" data-toggle="pill" data-target="#lesson7" type="button"
+                    role="tab" aria-controls="lesson5" aria-selected="false">Bài 7</button>
+            </li>
+
+            <li class="nav-item mx-1" role="presentation">
+                <button class="nav-link" id="pills-lesson8-tab" data-toggle="pill" data-target="#lesson8" type="button"
+                    role="tab" aria-controls="lesson5" aria-selected="false">Bài 8</button>
+            </li>
         </ul>
 
         <div class="tab-content" id="pills-tabContent">
@@ -157,8 +177,8 @@
             </div>
             <!-- Kết thúc bài tập 3 -->
 
-             <!-- Bài tập 4: Đoán hình tam giác -->
-             <div class="tab-pane fade" id="lesson4" role="tabpanel" aria-labelledby="pills-lesson4-tab">
+            <!-- Bài tập 4: Đoán hình tam giác -->
+            <div class="tab-pane fade" id="lesson4" role="tabpanel" aria-labelledby="pills-lesson4-tab">
                 <div class="row">
                     <div class="col-sm-4 mx-auto">
                         <div class="card">
@@ -197,6 +217,228 @@
                 </div>
             </div>
             <!-- Kết thúc bài tập 4 -->
+
+            <!-- Bài tập 5: Tính ngày tháng năm -->
+            <div class="tab-pane fade" id="lesson5" role="tabpanel" aria-labelledby="pills-lesson5-tab">
+                <div class="row">
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white text-center">Bài tập 5: Tính ngày tháng năm
+                            </div>
+
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <input type="number" id="day" class="form-control" placeholder="Nhập ngày" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="number" id="month" class="form-control" placeholder="Nhập tháng" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="number" id="year" class="form-control" placeholder="Nhập năm" />
+                                </div>
+
+                                <div class="text-center">
+                                    <button id="btn__yesterday" class="btn btn-danger">Ngày hôm qua</button>
+
+                                    <button id="btn__tomorrow" class="btn btn-danger">Ngày mai</button>
+                                </div>
+
+                                <!-- Hiển thị kết quả -->
+                                <div style="display: none;" class="text-center" id="result-guess">
+                                    <p>Kết quả</p>
+                                    <!-- Hiển thị sắp xếp -->
+                                    <p id="result-b5"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc bài tập 5  -->
+
+            <!-- Bài tập 6: Tính ngày -->
+            <div class="tab-pane fade" id="lesson6" role="tabpanel" aria-labelledby="pills-lesson6-tab">
+                <div class="row">
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white text-center">Bài tập 6: Tính ngày
+                            </div>
+
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <input type="number" id="monthnumber" class="form-control"
+                                        placeholder="Nhập tháng" />
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="number" id="yearnumber" class="form-control" placeholder="Nhập năm" />
+                                </div>
+
+                                <div class="text-center">
+                                    <button id="btn__calcday" class="btn btn-danger">Tính ngày</button>
+                                </div>
+
+                                <!-- Hiển thị kết quả -->
+                                <div style="display: none;" class="text-center" id="result-calcday">
+                                    <p>Kết quả</p>
+                                    <!-- Hiển thị sắp xếp -->
+                                    <p id="result-b6"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc bài tập 6 -->
+
+            <!-- Bài tập 7: Đọc số -->
+            <div class="tab-pane fade" id="lesson7" role="tabpanel" aria-labelledby="pills-lesson7-tab">
+                <div class="row">
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white text-center">Bài tập 7: Đọc số
+                            </div>
+
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <input type="number" id="readnumber" class="form-control"
+                                        placeholder="Nhập số thứ 1" />
+                                </div>
+
+                                <div class="text-center">
+                                    <button id="btn__read" class="btn btn-danger">Đọc số</button>
+                                </div>
+
+                                <!-- Hiển thị kết quả -->
+                                <div style="display: none;" class="text-center" id="result-read">
+                                    <p>Kết quả</p>
+                                    <!-- Hiển thị đọc số -->
+                                    <p id="result-b7"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc bài tập 7 -->
+
+            <!-- Bài tập 8: Tìm sinh viên xa trường -->
+            <div class="tab-pane fade" id="lesson8" role="tabpanel" aria-labelledby="pills-lesson8-tab">
+                <div class="row">
+                    <div class="col-sm-8 mx-auto">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white text-center">Bài tập 8: Tìm sinh viên xa trường
+                                nhất
+                            </div>
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5>Sinh viên 1</h5>
+                                    <div class="col">
+                                        <form>
+                                            <input type="text" id="txtname01" class="form-control"
+                                                placeholder="Nhập tên" />
+                                        </form>
+                                    </div>
+
+                                    <div class="col">
+                                        <form>
+                                            <input type="number" id="numberx01" class="form-control"
+                                                placeholder="Nhập tọa độ x" />
+                                        </form>
+                                    </div>
+
+                                    <div class="col">
+                                        <form>
+                                            <input type="number" id="numbery01" class="form-control"
+                                                placeholder="Nhập tọa độ y" />
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2">
+                                    <h5>Sinh viên 2</h5>
+                                    <div class="col">
+                                        <form>
+                                            <input type="text" id="txtname02" class="form-control"
+                                                placeholder="Nhập tên" />
+                                        </form>
+                                    </div>
+
+                                    <div class="col">
+                                        <form>
+                                            <input type="number" id="numberx02" class="form-control"
+                                                placeholder="Nhập tọa độ x" />
+                                        </form>
+                                    </div>
+
+                                    <div class="col">
+                                        <form>
+                                            <input type="number" id="numbery02" class="form-control"
+                                                placeholder="Nhập tọa độ y" />
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2">
+                                    <h5>Sinh viên 3</h5>
+                                    <div class="col">
+                                        <form>
+                                            <input type="text" id="txtname03" class="form-control"
+                                                placeholder="Nhập tên" />
+                                        </form>
+                                    </div>
+
+                                    <div class="col">
+                                        <form>
+                                            <input type="number" id="numberx03" class="form-control"
+                                                placeholder="Nhập tọa độ x" />
+                                        </form>
+                                    </div>
+
+                                    <div class="col">
+                                        <form>
+                                            <input type="number" id="numbery03" class="form-control"
+                                                placeholder="Nhập tọa độ y" />
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2">
+                                    <h5>Trường học</h5>
+                                    <div class="col">
+                                        <form>
+                                            <input type="number" id="numberx04" class="form-control"
+                                                placeholder="Nhập tọa độ x" />
+                                        </form>
+                                    </div>
+
+                                    <div class="col">
+                                        <form>
+                                            <input type="number" id="numbery04" class="form-control"
+                                                placeholder="Nhập tọa độ y" />
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="text-center" style="margin-top: 5px;">
+                                    <button id="btn__search" class="btn btn-danger">Tìm</button>
+                                </div>
+
+                                <!-- Hiển thị kết quả -->
+                                <div style="display: none;" class="text-center" id="result-search">
+                                    <p>Kết quả</p>
+                                    <!-- Hiển thị tìm kiếm -->
+                                    <p id="result-b8"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kết thúc bài tập 8 -->
         </div>
     </div>
 
