@@ -193,43 +193,103 @@ document.getElementById("btn__yesterday").onclick = function () {
     let month = +document.getElementById("month").value;
     let year = +document.getElementById("year").value;
 
-    let result = 0;
-
     let newday = day;
     let newmonth = month;
     let newyear = year;
 
     checkYear(month, year);
 
-    result = day + 1;
-
     // Kiểm tra trường hợp đầu tháng
-    if (day === 1) {
-        if (month === 5 || month === 7 || month === 10 || month === 12) {
-            newday = 30;
-            newmonth = month - 1;
-        }
+    if (month === 1 && day === 1) {
+        newday = 31;
+        newmonth = 12;
+        newyear = year - 1;
+    }
+    else if (year > 0 && month > 0 && day > 0 && day <= checkYear(month, year)) {
+        newday = day - 1;
 
-        else if (month === 1 || month === 2 || month === 4 || month === 6 || month === 8 || month === 9 || month === 11) {
-            newday = 31;
-            newmonth = month - 1;
-        }
-
-        else if (month === 3 && checkYear(month, year)) {
-            newday = 29;
-            newmonth = month - 1;
+        // Xét các trường hợp khác tháng 1 của đầu tháng
+        if (month !== 1 && day === 1) {
+            if (month === 5 || month === 7 || month === 10 || month === 12) {
+                newday = 30;
+                newmonth = month - 1;
+            }
+            else if (month === 2 || month === 4 || month === 6 || month === 8 || month === 9 || month === 11) {
+                newday = 31;
+                newmonth = month - 1;
+            }
+            else if (month === 3) {
+                if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                    newday = 29;
+                    newmonth = month - 1;
+                }
+                else {
+                    newday = 28;
+                    newmonth = month - 1;
+                }
+            }
         }
     }
 
-
-
+    // Hiển thị kết quả
+    document.getElementById("result-date").style.display = "block";
+    document.getElementById("result-b5").innerHTML = newday + "/" + newmonth + "/" + newyear;
 }
 
 // Khi nhấn nút ngày mai
 document.getElementById("btn__tomorrow").onclick = function () {
-    let day = document.getElementById("day").value;
-    let month = document.getElementById("month").value;
-    let year = document.getElementById("year").value;
+    let day = +document.getElementById("day").value;
+    let month = +document.getElementById("month").value;
+    let year = +document.getElementById("year").value;
+
+    let newday = day;
+    let newmonth = month;
+    let newyear = year;
+    
+    checkYear(month, year);
+
+    console.log(checkYear(month, year));
+
+    // Kiểm tra trường hợp cuối tháng
+    if (month === 12 && (day === 31 || day === 30 || day === 28 || day === 29)) {
+        newday = 1;
+        newmonth = 1;
+        newyear = year + 1;
+    }
+    else if (year > 0 && month > 0 && day > 0 && day <= checkYear(month, year)) {
+        newday = day + 1;
+
+        if (month !== 12 && (day === 31 || day === 30 || day === 28 || day === 29)) {
+            if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10) {
+                newday = 1;
+                newmonth = month + 1;
+            }
+            else if (month === 4 || month === 6 || month === 9 || month === 11) {
+                newday = 1;
+                newmonth = month + 1;
+            }
+            else if (month === 2) {
+                if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                    if (day === 29) {
+                        newday = 1;
+                        newmonth = month + 1;
+                    }
+                    else if (day === 28) {
+                        newday = day + 1;
+                        newmonth = month;
+                    }                    
+                }
+                else {
+                    newday = 1;
+                    newmonth = month + 1;
+                }
+            }
+        }
+    }
+
+    // Hiển thị kết quả
+    document.getElementById("result-date").style.display = "block";
+    document.getElementById("result-b5").innerHTML = newday + "/" + newmonth + "/" + newyear;
 }
 // Kết thúc bài tập 5
 
@@ -292,7 +352,7 @@ document.getElementById("btn__read").onclick = function () {
     number = Math.floor(number / 10);
 
     hangTram += number;
-
+    
     // Hàng trăm
     switch (hangTram) {
         case 1:
@@ -332,9 +392,14 @@ document.getElementById("btn__read").onclick = function () {
             break;
     }
 
-    // Xét chữu "lẻ" nếu hàng nghìn bằng 0
+    // Nếu hàng mươi là 0 và đơn vị khác không thì hiển thị chữu lẻ
     if (hangMuoi % 10 === 0 && hangDonVi !== 0) {
         resultMuoi = " lẻ ";
+    }
+
+    // Nếu hàng đơn vị là 0 thì không hiển thị chữ
+    if (hangDonVi === 0) {
+        resultDonVi = "";
     }
 
     // Hàng mươi
@@ -368,7 +433,7 @@ document.getElementById("btn__read").onclick = function () {
             break;
 
         case 8:
-            resultMuoi = "tám mưới ";
+            resultMuoi = "tám mươi ";
             break;
 
         case 9:
